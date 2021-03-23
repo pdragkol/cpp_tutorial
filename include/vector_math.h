@@ -1,7 +1,25 @@
 /// vector_math.h
 #include <vector>
-/// return a vector that is the element-wise addition of left and right
-std::vector<int> sum_vecs(std::vector<int> const &left, std::vector<int> const &right);
+#include <iostream>
 
-//print a vector element by element in one line 
-void print_vec(std::vector<int> const &vec);
+
+/// return a vector that is the element-wise addition of left and right
+template<typename T>
+std::vector<T> sum_vecs(std::vector<T> const &left, std::vector<T> const &right) {
+    int size = left.size();
+    std::vector<T> result(size);
+    for (int i = 0; i < size; ++i) {
+        result[i] = left[i] + right[i];
+    }
+    return result;
+}
+
+/// print a vector element by element in one line
+template<typename T>
+void print_vec(std::vector<T> const &vec) {
+    int size = vec.size();
+    for (int i = 0; i < size; ++i) {
+        std::cout << vec[i] << " ";
+    }
+    std::cout << "\n";
+}

@@ -188,19 +188,6 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-#=============================================================================
-# Target rules for targets named vector_math
-
-# Build rule for target.
-vector_math: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vector_math
-.PHONY : vector_math
-
-# fast build rule for target.
-vector_math/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector_math.dir/build.make CMakeFiles/vector_math.dir/build
-.PHONY : vector_math/fast
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -228,60 +215,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/vector_helpers.o: src/vector_helpers.cpp.o
-
-.PHONY : src/vector_helpers.o
-
-# target to build an object file
-src/vector_helpers.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector_math.dir/build.make CMakeFiles/vector_math.dir/src/vector_helpers.cpp.o
-.PHONY : src/vector_helpers.cpp.o
-
-src/vector_helpers.i: src/vector_helpers.cpp.i
-
-.PHONY : src/vector_helpers.i
-
-# target to preprocess a source file
-src/vector_helpers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector_math.dir/build.make CMakeFiles/vector_math.dir/src/vector_helpers.cpp.i
-.PHONY : src/vector_helpers.cpp.i
-
-src/vector_helpers.s: src/vector_helpers.cpp.s
-
-.PHONY : src/vector_helpers.s
-
-# target to generate assembly for a file
-src/vector_helpers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector_math.dir/build.make CMakeFiles/vector_math.dir/src/vector_helpers.cpp.s
-.PHONY : src/vector_helpers.cpp.s
-
-src/vector_math.o: src/vector_math.cpp.o
-
-.PHONY : src/vector_math.o
-
-# target to build an object file
-src/vector_math.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector_math.dir/build.make CMakeFiles/vector_math.dir/src/vector_math.cpp.o
-.PHONY : src/vector_math.cpp.o
-
-src/vector_math.i: src/vector_math.cpp.i
-
-.PHONY : src/vector_math.i
-
-# target to preprocess a source file
-src/vector_math.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector_math.dir/build.make CMakeFiles/vector_math.dir/src/vector_math.cpp.i
-.PHONY : src/vector_math.cpp.i
-
-src/vector_math.s: src/vector_math.cpp.s
-
-.PHONY : src/vector_math.s
-
-# target to generate assembly for a file
-src/vector_math.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector_math.dir/build.make CMakeFiles/vector_math.dir/src/vector_math.cpp.s
-.PHONY : src/vector_math.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -295,16 +228,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... main"
-	@echo "... vector_math"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/vector_helpers.o"
-	@echo "... src/vector_helpers.i"
-	@echo "... src/vector_helpers.s"
-	@echo "... src/vector_math.o"
-	@echo "... src/vector_math.i"
-	@echo "... src/vector_math.s"
 .PHONY : help
 
 
